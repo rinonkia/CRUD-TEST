@@ -20,3 +20,4 @@ Route::get('foo', function() {
 });
 
 Route::get('foo/foo1', 'FooController@foo1');
+Route::get('foo/foo2', 'FooController@foo2');
