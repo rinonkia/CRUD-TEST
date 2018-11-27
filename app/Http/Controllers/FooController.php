@@ -3,7 +3,7 @@
 namespace CRUDTEST\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use CRUDTEST\User;
 
 class FooController extends Controller
 {
@@ -20,7 +20,7 @@ class FooController extends Controller
     }
     public function foo3()
     {
-        $user = User::find(1);
+        $user = User::find(5);
         return view('foo.foo3', [
             'user' => $user,
         ]);

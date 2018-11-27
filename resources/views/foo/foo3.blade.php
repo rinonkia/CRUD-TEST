@@ -4,5 +4,5 @@
 </ul>
 <hr>
 @php
-    var_dump($user);
+    dd($user);
 @endphp
