@@ -51,27 +51,22 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
-                                <li class="nav-item">>
+                                <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @else
                                 {{-- 「プロフィール」と「ログアウト」のドロップダウンメニュ --}}
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="dropdown-user" data-target="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" href="#" id="dropdown-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         {{ Auth::user()->name }} <span class="caret"></span>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-user">
                                         <a class="dropdown-item" href="{{ url('users/'.auth()->user()->id) }}">
                                             {{ __('Profile') }} 
                                         </a>
-                                        <a class="dropdown-item" href="{{ route('login') }}"
-                                            onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
+                                        <a class="dropdown-item" href="{{ route('logout') }}">
                                             {{ __('Logout') }}
                                         </a>
-                                        <form id="login-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf 
-                                        </form>
                                     </div>
                                 </li>
                             @endguest
