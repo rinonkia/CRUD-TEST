@@ -20,11 +20,11 @@
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name') }}
                     </a>
-                    <button class="navbar-toggle" type='button' data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
-                        <span class="navbar-toggle-icon"></span>
+                    <button class="navbar-toggler" type='button' data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportContent">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         {{-- Navbarの左側 --}}
                         <ul class="navbar-nav mr-auto">
                             {{-- 記事とユーザーへのリング --}}
@@ -49,10 +49,10 @@
                             @guest
                                 {{-- 「ログイン」と「ユーザー登録」へのリンク --}}
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ ('__Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                                 <li class="nav-item">>
-                                    <a class="nav-link" href="{{ route('register')}}">{{ ('__Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @else
                                 {{-- 「プロフィール」と「ログアウト」のドロップダウンメニュ --}}
@@ -67,7 +67,7 @@
                                         <a class="dropdown-item" href="{{ route('login') }}"
                                             onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
-                                            {{ ('__Logout') }}
+                                            {{ __('Logout') }}
                                         </a>
                                         <form id="login-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             @csrf 
