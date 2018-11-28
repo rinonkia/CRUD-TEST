@@ -26,7 +26,7 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportContent">
                         {{-- Navbarの左側 --}}
-                        <ul class="navbar-bav mr-auto">
+                        <ul class="navbar-nav mr-auto">
                             {{-- 記事とユーザーへのリング --}}
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('posts') }}">{{ __('Posts') }}</a>
