@@ -1,4 +1,4 @@
-@extends('layout.foo')
+@extends('layouts.my')
 @section('title', $title)
 @section('content')
     {{-- 個別ページの内容 --}}

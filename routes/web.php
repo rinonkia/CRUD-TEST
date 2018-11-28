@@ -19,6 +19,14 @@ Route::get('foo', function() {
     return 'Foo!';
 });
 
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login')->name('login.post');
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('register', 'Auth\RegisterController@register')->name('register.post');
+
+
 Route::get('foo/foo1', 'FooController@foo1');
 Route::get('foo/foo2', 'FooController@foo2');
 Route::get('foo/foo3', 'FooController@foo3');
