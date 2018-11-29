@@ -3,7 +3,7 @@
 namespace CRUDTEST\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use CRUDTEST\User;
 
 
 class UserController extends Controller
