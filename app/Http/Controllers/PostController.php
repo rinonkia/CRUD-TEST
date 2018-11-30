@@ -3,6 +3,7 @@
 namespace CRUDTEST\Http\Controllers;
 
 use Illuminate\Http\Request;
+use CRUDTEST\Post;
 
 class PostController extends Controller
 {
