@@ -1,5 +1,5 @@
 @php
-    $title = __('Posts');
+    $title = __('Users');
 @endphp
 @extends('layouts.my')
 @section('content')
@@ -9,25 +9,20 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>{{ __('Title') }}</th>
-                    <th>{{ __('Body') }}</th>
-                    <th>{{ __('Created') }}</th>
-                    <th>{{ __('Updated') }}</th>
+                    <th>{{ __('ID') }}</th>
+                    <th>{{ __('Name') }}</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($posts as $post)
+                @foreach ($users as $user)
                     <tr>
-                        <td>
-                            <a href="{{ url('posts/'.$post->id) }}">{{ $post->title }}</a>
-                        </td>
-                        <td>{{ $post->body }}</td>
-                        <td>{{ $post->created_at }}</td>
-                        <td>{{ $post->updated_ad }}</td>
+                        <td>{{ $user->id }}</td>
+                        <td><a href="{{ url('users/'.$user->id) }}">{{ $user->name }}</a></td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
     </div>
+    {{ $users->links() }}
 </div>
 @endsection
