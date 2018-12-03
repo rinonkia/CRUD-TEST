@@ -17,17 +17,19 @@
             </thead>
             <tbody>
                 @foreach ($posts as $post)
-                <tr>
-                    <td>
-                        <a href="{{ url('posts/'.$post->id) }}">{{ $post->title }}>
+                    <tr>
+                        <td>
+                            <a href="{{ url('posts/'.$post->id) }}">{{ $post->title }}>
                         </td>
                         <td>{{ $post->body }}</td>
                         <td>{{ $post->created_at }}</td>
                         <td>{{ $post->updated_at }}</td>
-                     </tr>
+                    </tr>
                 @endforeach
-                </tbody>
-            </table>
-        </div>
+            </tbody>
+        </table>
     </div>
+    {{ $posts->links() }}
+</div>
+    
 @endsection
