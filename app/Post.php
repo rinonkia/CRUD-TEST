@@ -10,6 +10,10 @@ class Post extends Model
         'title', 'body',
     ];
 
+
+    /**
+     * 多対1のリレーション
+     */
     public function user()
     {
         return $this->belongsTo(User::class);
