@@ -20,6 +20,12 @@
 
     {{-- 記事内容 --}}
     <dl class="row">
+        <dt class="col-md-2">{{ __('Auther') }}:</dt>
+        <dd class="col-md-10">
+            <a href="{{ url('users/'.$post->user->id) }}">
+                {{ $post->user->name }}
+            </a>
+        </dd>
         <dt class="col-md-2">{{ __('Created') }}:</dt>
         <dd class="col-md-10">
             <time itemprop="dateCreated" datetime="{{ $post->created_at }}">
