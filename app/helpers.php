@@ -10,6 +10,6 @@ if (! function_exists('my_is_current_controller')) {
     function my_is_current_controller(...$names)
     {
         $current = explode('.', Route::currentRouteName())[0];
-        return in_array($current, $name, true);
+        return in_array($current, $names, true);
     }
 }
