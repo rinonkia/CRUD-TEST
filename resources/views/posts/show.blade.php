@@ -13,7 +13,7 @@
             {{ __('Edit') }}
         </a>
         @component('components.btn-del')
-            @slot('table', 'post')
+            @slot('table', 'posts')
             @slot('id', $post->id)
         @endcomponent
     </div>
