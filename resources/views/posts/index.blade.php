@@ -1,7 +1,7 @@
 @php
     $title =__('Post');
 @endphp
-@extends('layout.php')
+@extends('layouts.my')
 @section('content')
 <div class="container">
     <h1>{{ $title }}</h1>
@@ -19,7 +19,7 @@
                 @foreach ($posts as $post)
                 <tr>
                     <td>
-                        <a href="{{ url('posts/'.$posts->id) }}">{{ $post->title }}>
+                        <a href="{{ url('posts/'.$post->id) }}">{{ $post->title }}>
                         </td>
                         <td>{{ $post->body }}</td>
                         <td>{{ $post->created_at }}</td>
