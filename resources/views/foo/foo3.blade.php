@@ -4,5 +4,6 @@
 </ul>
 <hr>
 @php
-    dd($user);
+    //$request = App::instance();
+    //dd($request);
 @endphp

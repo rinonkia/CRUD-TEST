@@ -24,8 +24,8 @@ class CheckLocale
          * テストでは使用言語を英語で固定する。
          * Dusk内では__()などは使えないため
          */
-        if(\CRUDTEST::environment('testing')) {
-            \CRUDTEST::setLocale('en');
+        if(\APP::environment('testing')) {
+            \APP::setLocale('ja');
             return $next($request);
         }
 

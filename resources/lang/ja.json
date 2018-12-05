@@ -1,9 +1,9 @@
 {
-    "My practice for basic CRUD of Laravel 5.7 on Heroku": "Laravel 5.7の基本的なCRUDをHerokuで後悔する練習です。",
+    "My practice for basic CRUD of Laravel 5.7 on Heroku": "Laravel 5.7の基本的なCRUDメソッドをHerokuで公開する練習です。",
     "Feature": "機能",
-    "All visitors can read all posts.": "訪問者は全ての投稿を読めます。",
-    "All visitors can read all users' profile except email address.": "訪問者はメールアドレスを覗く会員のプロフィールを読めます。",
-    "All visitors can sign up.": "訪問者は会員登録できます。",
+    "All visitors can read all posts.": "ゲストは全ての投稿を読むことができます。。",
+    "All visitors can read all users' profile except email address.": "ゲストはメールアドレスを覗く会員のプロフィールを読めます。",
+    "All visitors can sign up.": "ゲストは会員登録できます。",
     "Each the logged in user can post, edit and delete.": "会員は記事の投稿、編集、削除ができます。",
     "The admin can edit and delete all users' account and posts.": "管理者は会員のアカウントと投稿を編集、削除できます。",
 
@@ -16,12 +16,11 @@
 
     "Post": "記事",
     "Posts": "記事",
-    "Create Post": "記事を投稿する",
-    "Authoer": "投稿者",
+    "Author": "投稿者",
     "Title": "題名",
     "Body": "本文",
-    "Created": "作成時刻",
-    "Updated": "更新時刻",
+    "Created": "作成日時",
+    "Updated": "更新日時",
 
     "Posted new article.": "記事を投稿しました。",
     "Updated an article.": "記事を更新しました。",
@@ -40,9 +39,12 @@
     "User": "ユーザー",
     "Profile": "プロフィール",
     "Name": "ユーザー名",
-    "E-mail Address": "メールアドレス",
+    "E-Mail Address": "メールアドレス",
     "Password": " パスワード",
     "Confirm Password": "パスワード(確認用)",
+    "Register": "新規登録",
+    "Login": "ログイン",
+    "Logout": "ログアウト",
 
     "Sent Password Reset Link": "パスワードの再設定用のリンクを送る",
     "Reset Password": "パスワードの再設定",

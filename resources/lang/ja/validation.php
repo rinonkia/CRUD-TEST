@@ -39,7 +39,7 @@ return [
     'digits_between' => ':attribute は :min 〜 :max 桁にしてください。',
     'dimensions' => ':attribute は無効な画像サイズです。',
     'distinct' => ':attribute は値が重複しています。',
-    'email' => ':attribute を正しいメールアドレスにしてください。',
+    'email' => ':attribute を正しく入力してください。',
     'exists' => '選択された :attribute は正しくありません。',
     'file' => ':attribute はファイルにしてください。',
     'filled' => ':attribute は必須です。',
@@ -147,7 +147,7 @@ return [
         'title' => __('Title'),
         'body' => __('Body'),
         'name' => __('Name'),
-        'email' => __('E-mail Address'),
+        'email' => __('E-Mail Address'),
         'password' => __('Password'),
     ],
 
