@@ -9,11 +9,11 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>{{ __('Auther') }}</th>
+                    <th>{{ __('Author') }}</th>
                     <th>{{ __('Title') }}</th>
                     <th>{{ __('Body') }}</th>
-                    <th>{{ __('Created_at') }}</th>
-                    <th>{{ __('Updated_at') }}</th>
+                    <th>{{ __('Created') }}</th>
+                    <th>{{ __('Updated') }}</th>
                 </tr>
             </thead>
             <tbody>
