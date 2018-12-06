@@ -19,7 +19,7 @@
         </li>
         <li>
             Qiita:
-            <a href="#">
+            <a href="https://qiita.com/sutara79/items/ef30fcdfb7afcb2188ea" target="_blank">
                     Laravel 5.7で基本的なCRUDを作る
             </a>
         </li>
