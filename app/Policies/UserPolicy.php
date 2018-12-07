@@ -16,7 +16,7 @@ class UserPolicy
      * @param \CRUDTEST\User $model 現在表示しているプロフィールページのユーザー
      * @return mixed
      */
-    public function edit(User $userm, User $model)
+    public function edit(User $user, User $model)
     {
         return $user->id == $model->id;
     }
