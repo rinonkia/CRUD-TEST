@@ -2,6 +2,11 @@
 
 namespace CRUDTEST\Providers;
 
+use CRUDTEST\User;
+use CRUDTEST\Policies\UserPolicy;
+use CRUDTEST\Post;
+use CRUDTEST\Policies\PostPolicy;
+
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
