@@ -38,4 +38,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class)->latest();
     }
+
+    /**
+     * 現在のユーザー、もしくは引数で渡されたIDが管理者稼働羽化を返す
+     * @param numbet $id User ID
+     * @return boolean
+     */
+    public function isAdmin($id = null) {
+        $id = ($id) ? $id : $this->id;
+        return $id == config('admin_id');
+    }
 }
