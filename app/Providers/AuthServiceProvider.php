@@ -14,6 +14,8 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         'CRUDTEST\Model' => 'CRUDTEST\Policies\ModelPolicy',
+        User::class => UserPolicy::class,
+        Post::class => PostPolicy::class,
     ];
 
     /**
