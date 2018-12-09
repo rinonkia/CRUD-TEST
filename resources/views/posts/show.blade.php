@@ -16,6 +16,7 @@
             @component('components.btn-del')
                 @slot('table', 'posts')
                 @slot('id', $post->id)
+                @slot('id', $post->title)
             @endcomponent
         </div>
     @endcan
