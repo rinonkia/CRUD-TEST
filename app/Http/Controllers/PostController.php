@@ -4,6 +4,8 @@ namespace CRUDTEST\Http\Controllers;
 
 use Illuminate\Http\Request;
 use CRUDTEST\Post;
+use CRUDTEST\User;
+use Auth;
 
 class PostController extends Controller
 {
@@ -38,11 +40,17 @@ class PostController extends Controller
      */
     public function store(Request $request, Post $post)
     {
-        $post->create([
-            'title' => $request->title,
-            'body' => $request->body,
-        ]);
-        return redirect('posts/'.$post->id);
+        if (Auth::check()) {
+            $user = Auth::user();
+            $post->create([
+                'title' => $request->title,
+                'body' => $request->body,
+                'user_id' => $user->id,
+            ]);
+            return redirect('posts/'.$post->id);
+        }
+        return redirect()->back();
+
     }
 
     /**
