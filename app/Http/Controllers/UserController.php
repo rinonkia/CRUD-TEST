@@ -8,11 +8,10 @@ use CRUDTEST\User;
 
 class UserController extends Controller
 {
-
     /**
      * 
      */
-    public function __constract()
+    public function __construct()
     {
         $this->middleware('auth')->except(['index', 'show']);
     }

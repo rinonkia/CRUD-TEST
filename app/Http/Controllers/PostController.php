@@ -12,7 +12,7 @@ class PostController extends Controller
     /**
      * 各アクションの前に実行されるミドルウェア
      */
-    public function __constract()
+    public function __construct()
     {
         $this->middleware('auth')->except(['index', 'show']);
     }
