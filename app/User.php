@@ -5,6 +5,7 @@ namespace CRUDTEST;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use CRUDTEST\Notifications\CustomPasswordReset;
 
 class User extends Authenticatable
 {
@@ -47,5 +48,15 @@ class User extends Authenticatable
     public function isAdmin($id = null) {
         $id = ($id) ? $id : $this->id;
         return $id == config('admin_id');
+    }
+    /**
+     * パスワードリセット通知の送信
+     * 
+     * @param string $token
+     * @return void
+     */
+    public function sendPasswoedResetNotification()
+    {
+        $this->notify(new CostomPasswordReset($token));
     }
 }
