@@ -1,5 +1,5 @@
 @php
-    $title = __('Verify Your Email Address')    
+    $title = __('Verify Your Email Address');
 @endphp
 @extends('layouts.my')
 
