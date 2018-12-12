@@ -13,7 +13,9 @@ class UserController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth')->except(['index', 'show']);
+        //$this->middleware('auth')->except(['index', 'show']);
+        $this->middleware('auth')->only('destroy');
+        $this->middleware('verified')->except('index', 'show', 'destroy');
     }
     /**
      * Display a listing of the resource.
