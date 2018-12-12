@@ -3,13 +3,15 @@
 namespace CRUDTEST;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Auth\MustVerifyEmail as MustVerifyEmailContract;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use CRUDTEST\Notifications\CustomPasswordReset;
+use Illuminate\Auth\MustVerifyEmail;
+use CRUDTEST\Notification\CustomVerifyEmail;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmailContract
 {
-    use Notifiable;
+    use MustVerifyEmail, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -58,5 +60,15 @@ class User extends Authenticatable
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new CustomPasswordReset($token));
+    }
+
+    /**
+     * メール確認通知の送信
+     * 
+     * @return void
+     */
+    public function sendEmailVerifycationNotification()
+    {
+        $this->notify(new CustomVerifyEmail());
     }
 }
