@@ -7,6 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail as MustVerifyEmailContract;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use CRUDTEST\Notifications\CustomPasswordReset;
 use Illuminate\Auth\MustVerifyEmail;
+use CRUDTEST\Notification\CustomVerifyEmail;
 
 class User extends Authenticatable implements MustVerifyEmailContract
 {
@@ -59,5 +60,15 @@ class User extends Authenticatable implements MustVerifyEmailContract
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new CustomPasswordReset($token));
+    }
+
+    /**
+     * メール確認通知の送信
+     * 
+     * @return void
+     */
+    public function sendEmailVerifycationNotification()
+    {
+        $this->notify(new CustomVerifyEmail());
     }
 }
