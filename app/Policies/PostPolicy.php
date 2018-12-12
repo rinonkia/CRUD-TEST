@@ -35,15 +35,4 @@ class PostPolicy
     {
         return $user->id == $post->user_id;
     }
-
-
-    /**
-     * Create a new policy instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        //
-    }
 }

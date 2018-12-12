@@ -43,7 +43,7 @@ class User extends Authenticatable implements MustVerifyEmailContract
     }
 
     /**
-     * 現在のユーザー、もしくは引数で渡されたIDが管理者稼働羽化を返す
+     * 現在のユーザー、もしくは引数で渡されたIDが管理者かどうかを返す
      * @param numbet $id User ID
      * @return boolean
      */

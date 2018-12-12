@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
          * グローバル変数
          * 管理者のID番号を1とする
          */
-        config(['admin_id' => 1]);
+        config(['admin_id' => 2]);
     }
 
     /**

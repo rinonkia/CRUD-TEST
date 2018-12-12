@@ -9,6 +9,17 @@ class UserPolicy
 {
     use HandlesAuthorization;
 
+
+    /**
+     * @param $user
+     * @param $ability
+     * @return mixed
+     */
+    public function before($user, $ability)
+    {
+        return $user->isAdmin() ? true : null;
+    }
+    
     /**
      * 編集と削除の認可を判断する。
      * 
@@ -19,15 +30,5 @@ class UserPolicy
     public function edit(User $user, User $model)
     {
         return $user->id == $model->id;
-    }
-
-    /**
-     * Create a new policy instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        //
     }
 }
