@@ -11,7 +11,7 @@ use CRUDTEST\Notification\CustomVerifyEmail;
 
 class User extends Authenticatable implements MustVerifyEmailContract
 {
-    use MostVerifyEmail, Notifiable;
+    use MustVerifyEmail, Notifiable;
 
     /**
      * The attributes that are mass assignable.
