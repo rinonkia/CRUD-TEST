@@ -3,13 +3,14 @@
 namespace CRUDTEST;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Auth\MustVerifyEmail as MustVerifyEmailContract;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use CRUDTEST\Notifications\CustomPasswordReset;
+use Illuminate\Auth\MustVerifyEmail;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmailContract
 {
-    use Notifiable;
+    use MostVerifyEmail, Notifiable;
 
     /**
      * The attributes that are mass assignable.
