@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use CRUDTEST\Post;
 use CRUDTEST\User;
 use Auth;
+use CRUDTEST\Http\Requests\StorePost;
 
 class PostController extends Controller
 {
@@ -45,10 +46,11 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Requests\StorePost  $request
+     * @param  \CRUDTEST\Post $post
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Post $post)
+    public function store(StorePost $request, Post $post)
     {
         if (Auth::check()) {
             $user = Auth::user();
@@ -66,7 +68,7 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \CRUDTEST\Post $post
      * @return \Illuminate\Http\Response
      */
     public function show(Post $post)
@@ -79,7 +81,7 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \CRUDTEST\Post $post
      * @return \Illuminate\Http\Response
      */
     public function edit(Post $post)
@@ -93,8 +95,8 @@ class PostController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Requests\StorePost  $request
+     * @param  \CRUDTEST\Post $post
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Post $post)
@@ -110,7 +112,7 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \CRUDTEST\Post $post
      * @return \Illuminate\Http\Response
      */
     public function destroy(Post $post)
