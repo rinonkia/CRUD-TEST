@@ -4,6 +4,7 @@ namespace CRUDTEST\Http\Controllers;
 
 use Illuminate\Http\Request;
 use CRUDTEST\User;
+use CRUDTEST\Http\Requests\StoreUser;
 
 
 class UserController extends Controller
@@ -45,10 +46,10 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \CRUDTEST\Http\Requests\StoreUser  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreUser $request)
     {
         $user = User::create([
             'name' => $request->name,
@@ -100,10 +101,16 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         $this->authorize('edit', $user);
+
+        // 編集する場合はname欄だけなので、バリデーションもnameだけ取り出す
+        $request->validate([
+            'name' => (new StoreUser())->rules()['name']
+        ]);
+
         $user->update([
             'name' => $request->name,
         ]);
-        return redirect('users/'.$user->id);
+        return redirect('users/'.$user->id)->with('my_status', __('Updated a user.'));
     }
 
     /**

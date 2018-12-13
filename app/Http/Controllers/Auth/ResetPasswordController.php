@@ -5,6 +5,8 @@ namespace CRUDTEST\Http\Controllers\Auth;
 use CRUDTEST\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
+use CRUDTEST\Http\Requests\StoreUser;
+
 class ResetPasswordController extends Controller
 {
     /*
@@ -35,5 +37,22 @@ class ResetPasswordController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+
+    /**
+     * パスワード再設定用のバリデーションルール
+     * 
+     * @return array
+     */
+    protected function rules()
+    {
+        return [
+            'token' => 'required',
+            'email' => [
+                'required',
+                'email',
+            ],
+            'password' => (new StoreUser())->rules()['password'],
+        ];
     }
 }
