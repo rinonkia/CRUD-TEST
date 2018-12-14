@@ -9,32 +9,34 @@
 
 {{-- モーダルウィンドウ --}}
 <div class="modal fade" id="{{ $id_attr }}" tabindex="-1" role="dialog" aria-labelledby="{{ $id_attr }}-label" aria-hidden="true">
-    <div class="nodal-dialog" role="document">
-        <div class="modal-header">
-            <h5 class="modal-title" id="{{ $id_attr }}-label">
-                {{ __('Confirm delete') }}
-            </h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <p>{{ __('Are you sure to delete?') }}</p>
-            <p><strong>{{ $name }}</strong></p>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                {{ __('Cansel') }}
-            </button>
-
-            {{-- 削除用のアクションを実行させるフォーム --}}
-            <form action="{{ url($controller. '/' . $id) }}" method="post">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="btn btn-danger">
-                    {{ __('Delete') }}
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="{{ $id_attr }}-label">
+                    {{ __('Confirm delete') }}
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
                 </button>
-            </form>
+            </div>
+            <div class="modal-body">
+                <p>{{ __('Are you sure to delete?') }}</p>
+                <p><strong>{{ $name }}</strong></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    {{ __('Cancel') }}
+                </button>
+
+                {{-- 削除用のアクションを実行させるフォーム --}}
+                <form action="{{ url($controller. '/' . $id) }}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">
+                        {{ __('Delete') }}
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
 </div>

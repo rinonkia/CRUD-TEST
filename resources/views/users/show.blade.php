@@ -7,21 +7,21 @@
     <h1>{{ $title }}</h1>
 
     {{-- 編集・削除ボタン --}}
-    @if (Auth::check() && !Auth::user()->isAdmin($user->id))
-        @can('edit', $user)
-            <div>
-                <a href="{{ url('users/'.$user->id.'/edit') }}" class="btn btn-primary">
-                    {{ __('Edit') }}
-                </a>
-                {{-- 削除ボタン --}}
-                @component('components.btn-del')
-                    @slot('controller', 'users')
-                    @slot('id', $user->id)
-                    @slot('name', $user->name)
-                @endcomponent
-            </div>
-        @endcan
-    @endif
+
+    @can('edit', $user)
+        <div>
+            <a href="{{ url('users/'.$user->id.'/edit') }}" class="btn btn-primary">
+                {{ __('Edit') }}
+            </a>
+            {{-- 削除ボタン --}}
+            @component('components.btn-del')
+                @slot('controller', 'users')
+                @slot('id', $user->id)
+                @slot('name', $user->name)
+            @endcomponent
+        </div>
+    @endcan
+    
 
     {{-- ユーザー1件の情報 --}}
     <dl class="row">
