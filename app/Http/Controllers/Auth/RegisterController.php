@@ -75,7 +75,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
-    public function registerd(Request $request, $user)
+    protected function registerd(Request $request, $user)
     {
         // 登録したら、そのユーザーのプロフィールページへ
         return redirect('user/' .$user->id)
