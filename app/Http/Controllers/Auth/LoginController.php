@@ -48,4 +48,13 @@ class LoginController extends Controller
     {
         return redirect('users/' .$user->id)->with('my_status', __('You logged in.'));
     }
+
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+        $request->session()->invalidate();
+
+        // ログアウトしたらトップページへ
+        return $this->loggedOut($request) ?: redirect('/')->with('my_status', __('You logged out.'));
+    }
 }
