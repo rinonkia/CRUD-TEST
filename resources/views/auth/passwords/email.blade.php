@@ -1,4 +1,8 @@
-@extends('layouts.app')
+@php
+    $title = __('Password Reset');
+@endphp
+
+@extends('layouts.my')
 
 @section('content')
 <div class="container">
