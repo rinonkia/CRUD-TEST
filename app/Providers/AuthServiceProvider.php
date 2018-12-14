@@ -4,6 +4,10 @@ namespace CRUDTEST\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use CRUDTEST\User;
+use CRUDTEST\Post;
+use CRUDTEST\Policies\UserPolicy;
+use CRUDTEST\Policies\PostPolicy;
 
 class AuthServiceProvider extends ServiceProvider
 {

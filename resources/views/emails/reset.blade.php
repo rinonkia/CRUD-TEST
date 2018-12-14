@@ -6,5 +6,5 @@
     {{ __('If you did not request a password reset, no further action is required.') }}
 </p>
 <p>
-    {{ $actionTest }}: <a href="{{ $actionUrl }}">{{ $actionUrl }}</a>
+    {{ $actionText }}: <a href="{{ $actionUrl }}">{{ $actionUrl }}</a>
 </p>

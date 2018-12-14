@@ -48,7 +48,7 @@
     "Login": "ログイン",
     "Logout": "ログアウト",
 
-    "Sent Password Reset Link": "パスワードの再設定用のリンクを送る",
+    "Send Password Reset Link": "パスワードのリセットリンクを送る",
     "Reset Password": "パスワードの再設定",
     "Click link below and reset password.": "下記のURLにアクセスして、パスワードを再設定してください。",
     "If you did not request a password reset, no further action is required.": "このメールに心当たりがない場合は、このまま削除してください。",
