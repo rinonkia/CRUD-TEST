@@ -4,6 +4,7 @@ namespace CRUDTEST\Http\Controllers\Auth;
 
 use CRUDTEST\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -35,5 +36,16 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+    /**
+     * ログイン後の処理
+     * 
+     * @param \Illuminate\Http\Request $request
+     * @param mixed $user
+     * @return \Illuminate\Http\Response
+     */
+    public function authenticated(Request $request, $user)
+    {
+        return redirect('users/' .$user->id)->with('my_status', __('You logged in.'));
     }
 }
