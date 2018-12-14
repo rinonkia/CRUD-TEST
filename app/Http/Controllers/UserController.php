@@ -56,7 +56,7 @@ class UserController extends Controller
             'email' => $request->email,
             'password' => $request->password,
         ]);
-        return redirect('users/'.$user->id);
+        return redirect('users/'.$user->id)->with('my_status', __('Create new user.'));
     }
 
     /**
@@ -123,6 +123,6 @@ class UserController extends Controller
     {
         $this->authorize('edit', $user);
         $user->delete();
-        return redirect('users');
+        return redirect('users')->with('my_status', __('Deleted a user.'));
     }
 }
