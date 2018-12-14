@@ -19,6 +19,12 @@ class Kernel extends HttpKernel
         \CRUDTEST\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \CRUDTEST\Http\Middleware\TrustProxies::class,
+
+        // $middlewareGroups['web'] から移動
+        \CRUDTEST\Http\Middleware\EncryptCookies::class,
+        \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+        \Illuminate\Session\Middleware\StartSession::class,
+        \CRUDTEST\Http\Middleware\CheckLocale::class,
     ];
 
     /**
@@ -28,14 +34,13 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \CRUDTEST\Http\Middleware\EncryptCookies::class,
-            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
-            \Illuminate\Session\Middleware\StartSession::class,
+            
+            
             // \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \CRUDTEST\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \CRUDTEST\Http\Middleware\CheckLocale::class,
+
         ],
 
         'api' => [
