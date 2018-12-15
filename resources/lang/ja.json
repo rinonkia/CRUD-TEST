@@ -58,11 +58,13 @@
     "Registration have not yet completed.": "登録はまだ完了していません",
     "Check your email for a verification link.": "確認用に送信したメールの記事にしたがって、登録手続きを完了してください。",
     "Registration completed": "ユーザー登録が完了しました",
+    "Remember Me": "ログイン情報を記録しておく",
+    "Forgot Your Password?": "パスワードを忘れた場合はこちら",
 
 
     "Error": "エラー",
     "Forbidden": "閲覧禁止",
-    "You do not have permisson to access this page.": "このページを表示する権限がありません。",
+    "You do not have permission to access this page.": "このページを表示する権限がありません",
     "Not Found": "ページが見つかりません。",
     "The requested page does not exist.": "リクエストされたページは存在しません。",
     "Internal Server Error": "サーバ内部エラー",
@@ -81,4 +83,5 @@
 
     "If you're having trouble clicking the \"Verify Email Address\" button, copy and paste the URL below into your web browser.": "もしボタンをクリックしてもリンク先に飛ばない場合は、下記URLをプラウザにコピーしてください。"
     
+
 }
