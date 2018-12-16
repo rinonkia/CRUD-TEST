@@ -61,6 +61,8 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ]
+        ],
+        "test": "phpunit",
+        "cover": "phpunit --coverage-html coverage"
     }
 }
