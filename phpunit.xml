@@ -20,6 +20,25 @@
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./app</directory>
+
+            <exclude>
+                <directory suffix=".php">./app/Console</directory>
+                <directory suffix=".php">./php/Exceptions</directory>
+
+                <file>./app/Http/Controllers/Controller.php</file>
+                <file>./app/Http/Controllers/FooController.php</file>
+
+                <file>./app/Http/Middleware/Authenticate.php</file>
+                <file>./app/Http/Middleware/CheckForMaintenanceMode.php</file>
+                <file>./app/Http/Middleware/EncryptCookies.php</file>
+                <file>./app/Http/Middleware/TrimStrings.php</file>
+                <file>./app/Http/Middleware/TrustProxies.php</file>
+                <file>./app/Http/Middleware/VerifyCsrfToken.php</file>
+
+                <file>./app/Provider/BroadcastServiceProvider.php</file>
+                <file>./app/Provider/EventServiceProvider.php</file>
+                <file>./app/Provider/RouteServiceProvider.php</file>
+            </exclude>
         </whitelist>
     </filter>
     <php>
