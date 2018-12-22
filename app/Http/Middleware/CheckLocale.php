@@ -25,7 +25,7 @@ class CheckLocale
          * Dusk内では__()などは使えないため
          */
         if(\App::environment('testing')) {
-            \CRUDTEST::setLocale('en');
+            \App::setLocale('en');
             return $next($request);
         }
 
