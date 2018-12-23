@@ -29,8 +29,7 @@
         <dt class="col-md-10">{{ $user->id }}</dt>
         <dt class="col-md-2">{{ __('Name') }}</dt>
         <dt class="col-md-10">{{ $user->name }}</dt>
-        <dt class="col-md-2">{{ __('E-Mail Address') }}</dt>
-        <dt class="col-md-10">{{ $user->email }}</dt>
+
     </dl>
 
     {{-- ユーザの記事一覧 --}}
