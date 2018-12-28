@@ -20,6 +20,10 @@ class AppServiceProvider extends ServiceProvider
     {
         \Schema::defaultStringLength(191);
 
+        if(\App::environment('pruduction')) {
+            \URL::forceScheme('https');
+        }
+
         /**
          * グローバル変数
          * 管理者のID番号を1とする
