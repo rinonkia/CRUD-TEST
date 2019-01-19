@@ -45,5 +45,11 @@
             </ul>
         </li>
     </ul>
+    <h2>{{ __('Changes from Original Site')}}</h2>
+    <ul>
+        <li>{{ __('Made not to display user\'s mail address.')}}</li>
+        <li>{{ __('Created style.css and make it more mobile-friendly.')}}</li>
+    </ul>
+
 </div>
 @endsection

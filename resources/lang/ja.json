@@ -81,7 +81,12 @@
     "If you did not create an account, no further action is required.": "ユーザー登録に心当たりがない場合は、このまま削除してください。",
     "Verify Email Address": "このアドレスで登録",
 
-    "If you're having trouble clicking the \"Verify Email Address\" button, copy and paste the URL below into your web browser.": "もしボタンをクリックしてもリンク先に飛ばない場合は、下記URLをプラウザにコピーしてください。"
+    "If you're having trouble clicking the \"Verify Email Address\" button, copy and paste the URL below into your web browser.": "もしボタンをクリックしてもリンク先に飛ばない場合は、下記URLをプラウザにコピーしてください。",
+
+    "Changes from Original Site": "デモサイトからの変更点",
+    "Made not to display user's mail address.": "ユーザのメールアドレスを表示しないようにしました。",
+    "Created style.css and make it more mobile-friendly.": "style.cssを作成し、さらにレスポンシブにしました。"
+
     
 
 }
