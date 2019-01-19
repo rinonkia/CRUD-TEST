@@ -11,7 +11,7 @@
         <title>@if (! Request::is('/')){{ $title }} | @endif{{ env('APP_NAME')}}</title>
 
         {{-- CSS --}}
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
         <div id="app">
