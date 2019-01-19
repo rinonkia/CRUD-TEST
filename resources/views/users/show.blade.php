@@ -40,8 +40,8 @@
                 <tr>
                     <th>{{ __('Title') }}</th>
                     <th>{{ __('Body') }}</th>
-                    <th>{{ __('Created') }}</th>
-                    <th>{{ __('Updated') }}</th>
+                    <th class="th-created">{{ __('Created') }}</th>
+                    <th class="th-updated">{{ __('Updated') }}</th>
                     
                     @can('edit', $user)
                         {{-- 記事の編集・削除ボタンのカラム --}}
@@ -58,8 +58,8 @@
                             </a>
                         </td>
                         <td>{{ $post->body }}</td>
-                        <td>{{ $post->created_at }}</td>
-                        <td>{{ $post->updated_at }}</td>
+                        <td class="td-created">{{ $post->created_at }}</td>
+                        <td class="td-updated">{{ $post->updated_at }}</td>
                         @can('edit', $user)
                             <td nawrap>
                                 <a href="{{ url('posts/'.$post->id.'/edit') }}" class="btn btn-primary">

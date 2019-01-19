@@ -12,8 +12,7 @@
                     <th>{{ __('Author') }}</th>
                     <th>{{ __('Title') }}</th>
                     <th>{{ __('Body') }}</th>
-                    <th>{{ __('Created') }}</th>
-                    <th>{{ __('Updated') }}</th>
+                    <th class="th-created">{{ __('Created') }}</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,8 +29,7 @@
                             </a>
                         </td>
                         <td>{{ $post->body }}</td>
-                        <td>{{ $post->created_at }}</td>
-                        <td>{{ $post->updated_at }}</td>
+                        <td class="td-created">{{ $post->created_at }}</td>
                     </tr>
                 @endforeach
             </tbody>
