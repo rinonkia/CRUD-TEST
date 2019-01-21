@@ -19,11 +19,9 @@
 
     {{-- ユーザー1件の情報 --}}
     <dl class="row">
-        <dt class="col-md-2">{{ __('ID') }}</dt>
-        <dt class="col-md-10">{{ $user->id }}</dt>
+        <dt class="col-md-12">{{ 'ID : '.  $user->id }}</dt>
         @if(Auth::id() == $user->id)
-            <dt class="col-md-2">{{ __('E-Mail Address')}}</dt>
-            <dt class="col-md-10">{{ $user->email }}</dt>
+            <dt class="col-md-12">{{ __('E-Mail Address') .': '. $user->email }}</dt>
         @endif
     </dl>
 

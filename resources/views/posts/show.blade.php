@@ -5,7 +5,31 @@
 @extends('layouts.my')
 @section('content')
 <div class="container">
-    <h1 id="post-title">{{ $title }}</h1>
+
+    {{-- 記事内容 --}}
+    <dl class="row">
+        <dt class="col-md-12">{{ __('Auther') .': '}}
+            <a href="{{ url('users/'.$post->user->id) }}">
+                {{ $post->user->name }}
+            </a>
+        </dt>
+        <dt class="col-md-12">{{ __('Created') .': '}}
+            <time itemprop="dateCreated" datetime="{{ $post->created_at }}">
+                {{ $post->created_at }}
+            </time>
+        </dt>
+        <dt class="col-md-12">{{ __('Updated') .': '}}
+            <time itemprop="dateMedified" datetime="{{ $post->updated_at }}">
+                {{ $post->updated_at }}
+            </time>
+        </dt>
+    </dl>
+    <h2 id="post-title">{{ __('Title') . ': '. $title }}</h1>
+    <hr>
+    <div id="post-body">
+        {{ $post->body }}
+    </div>
+    <hr>
 
     {{-- 編集・削除ボタン --}}
     @auth
@@ -22,31 +46,5 @@
             </div>
         @endcan
     @endauth
-
-    {{-- 記事内容 --}}
-    <dl class="row">
-        <dt class="col-md-2">{{ __('Auther') }}:</dt>
-        <dd class="col-md-10">
-            <a href="{{ url('users/'.$post->user->id) }}">
-                {{ $post->user->name }}
-            </a>
-        </dd>
-        <dt class="col-md-2">{{ __('Created') }}:</dt>
-        <dd class="col-md-10">
-            <time itemprop="dateCreated" datetime="{{ $post->created_at }}">
-                {{ $post->created_at }}
-            </time>
-        </dd>
-        <dt class="col-md-2">{{ __('Updated') }}:</dt>
-        <dd class="col-md-10">
-            <time itemprop="dateMedified" datetime="{{ $post->updated_at }}">
-                {{ $post->updated_at }}
-            </time>
-        </dd>
-    </dl>
-    <hr>
-    <div id="post-body">
-        {{ $post->body }}
-    </div>
 </div>
 @endsection
