@@ -17,7 +17,7 @@
                 </span>
             @endif
         </div>
-        <button type="submit" name="submit" class="btn btn-primary">{{ __('Submit') }}</button>
+        <button type="submit" name="submit" class="btn btn-primary">{{ __('Change') }}</button>
     </form>
 </div>
 @endsection

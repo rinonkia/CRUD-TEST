@@ -11,14 +11,8 @@
     @can('edit', $user)
         <div>
             <a href="{{ url('users/'.$user->id.'/edit') }}" class="btn btn-primary">
-                {{ __('Edit') }}
+                {{ __('Name edit') }}
             </a>
-            {{-- 削除ボタン --}}
-            @component('components.btn-del')
-                @slot('controller', 'users')
-                @slot('id', $user->id)
-                @slot('name', $user->name)
-            @endcomponent
         </div>
     @endcan
     
