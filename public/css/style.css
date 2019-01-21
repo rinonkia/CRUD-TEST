@@ -1,8 +1,14 @@
 @media screen and (max-width: 640px) {
+    .th-body {
+        display: none;
+    }
     .th-created {
         display: none;
     }
     .th-updated {
+        display: none;
+    }
+    .td-body {
         display: none;
     }
     .td-created {
