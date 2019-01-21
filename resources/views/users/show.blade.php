@@ -27,6 +27,10 @@
     <dl class="row">
         <dt class="col-md-2">{{ __('ID') }}</dt>
         <dt class="col-md-10">{{ $user->id }}</dt>
+        @if(Auth::id() == $user->id)
+            <dt class="col-md-2">{{ __('E-Mail Address')}}</dt>
+            <dt class="col-md-10">{{ $user->email }}</dt>
+        @endif
     </dl>
 
     {{-- ユーザの記事一覧 --}}
