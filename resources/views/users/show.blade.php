@@ -1,5 +1,5 @@
 @php
-    $title = __('User') . ':' . $user->name;
+    $title = $user->name;
 @endphp
 @extends('layouts.my')
 @section('content')
@@ -27,9 +27,6 @@
     <dl class="row">
         <dt class="col-md-2">{{ __('ID') }}</dt>
         <dt class="col-md-10">{{ $user->id }}</dt>
-        <dt class="col-md-2">{{ __('Name') }}</dt>
-        <dt class="col-md-10">{{ $user->name }}</dt>
-
     </dl>
 
     {{-- ユーザの記事一覧 --}}
