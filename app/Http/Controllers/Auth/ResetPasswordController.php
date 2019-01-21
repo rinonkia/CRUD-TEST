@@ -5,8 +5,6 @@ namespace CRUDTEST\Http\Controllers\Auth;
 use CRUDTEST\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 use Illuminate\Http\Request;
-
-
 use CRUDTEST\Http\Requests\StoreUser;
 
 class ResetPasswordController extends Controller
@@ -60,7 +58,7 @@ class ResetPasswordController extends Controller
     protected function sendResetResponse(Request $request, $response)
     {
         // リダイレクト先でフラッシュメッセージを表示する
-        return reqirect($this->redirectPath())
+        return redirect($this->redirectPath())
             ->with('my_status', trans($response));
     }
 }
