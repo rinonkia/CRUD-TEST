@@ -11,22 +11,18 @@
     @can('edit', $user)
         <div>
             <a href="{{ url('users/'.$user->id.'/edit') }}" class="btn btn-primary">
-                {{ __('Edit') }}
+                {{ __('Name edit') }}
             </a>
-            {{-- 削除ボタン --}}
-            @component('components.btn-del')
-                @slot('controller', 'users')
-                @slot('id', $user->id)
-                @slot('name', $user->name)
-            @endcomponent
         </div>
     @endcan
     
 
     {{-- ユーザー1件の情報 --}}
     <dl class="row">
-        <dt class="col-md-2">{{ __('ID') }}</dt>
-        <dt class="col-md-10">{{ $user->id }}</dt>
+        <dt class="col-md-12">{{ 'ID : '.  $user->id }}</dt>
+        @if(Auth::id() == $user->id)
+            <dt class="col-md-12">{{ __('E-Mail Address') .': '. $user->email }}</dt>
+        @endif
     </dl>
 
     {{-- ユーザの記事一覧 --}}

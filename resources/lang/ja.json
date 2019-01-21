@@ -11,6 +11,8 @@
     "Edit": "編集",
     "Create": "新規作成",
     "Submit": "送信",
+    "Name edit": "名前の変更",
+    "Change": "変更",
 
     "Y-m-d H:i:s": "Y年m月d日 H:i:s",
 
@@ -19,7 +21,7 @@
     "Post": "記事",
     "Posts": "記事",
     "Author": "投稿者",
-    "Title": "題名",
+    "Title": "タイトル",
     "Body": "本文",
     "Created": "作成日時",
     "Updated": "更新日時",

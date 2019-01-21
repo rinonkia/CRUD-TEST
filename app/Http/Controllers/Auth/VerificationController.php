@@ -2,7 +2,8 @@
 
 namespace CRUDTEST\Http\Controllers\Auth;
 
-use CRUDTEST\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Auth\VerifiesEmails;
 use Illuminate\Auth\Events\Verified;
 
@@ -42,7 +43,7 @@ class VerificationController extends Controller
 
     public function verify(Request $request)
     {
-        if ($request->route('id') == $reqiest->user()->getKey() &&
+        if ($request->route('id') == $request->user()->getKey() &&
             $request->user()->markEmailAsVerified()) {
                 event(new Verified($request->user()));
         }
