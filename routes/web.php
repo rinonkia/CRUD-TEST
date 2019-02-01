@@ -28,9 +28,7 @@ Route::post('register', 'Auth\RegisterController@register')->name('register.post
 Route::get('foo/foo3', 'FooController@foo3');
 Route::get('foo/foo4', 'FooController@foo4');
 
-Auth::routes(['verify' => true], function() {
-    return view('top');
-});
+Auth::routes(['verify' => true]);
 
 Route::resource('users', 'UserController');
 
