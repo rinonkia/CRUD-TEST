@@ -149,6 +149,7 @@ return [
         'name' => __('Name'),
         'email' => __('E-Mail Address'),
         'password' => __('Password'),
+        'author' => __('Author'),
     ],
 
 ];

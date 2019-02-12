@@ -8,7 +8,7 @@
 
     {{-- 記事内容 --}}
     <dl class="row">
-        <dt class="col-md-12">{{ __('Auther') .': '}}
+        <dt class="col-md-12">{{ __('Author') .': '}}
             <a href="{{ url('users/'.$post->user->id) }}">
                 {{ $post->user->name }}
             </a>
